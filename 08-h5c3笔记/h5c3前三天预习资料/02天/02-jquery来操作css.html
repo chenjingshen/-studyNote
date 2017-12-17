@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .black {
+            background-color: black;
+        }
+
+        .white {
+            background-color: white;
+        }
+    </style>
+
+    <script src="./jquery.min.js"></script>
+
+    <script>
+        $(function(){
+            $("#open").click(function(){
+                $("body").addClass("white").removeClass("black");
+            });
+
+            $("#close").click(function(){
+                $("body").addClass("black").removeClass("white");
+            });
+
+            $("#toggle").click(function(){
+                $("body").toggleClass("black");
+            });
+
+            $("#isclose").click(function(){
+                console.log($("body").hasClass("black"));
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="button" id="open" value="开灯">
+    <input type="button" id="close" value="关灯">
+    <input type="button" id="toggle" value="点一下开，再点一下关">
+    <input type="button" id="isclose" value="是否关灯了？">
+</body>
+</html>

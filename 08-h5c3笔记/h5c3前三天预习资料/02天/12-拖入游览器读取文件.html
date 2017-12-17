@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            margin: 100px auto;
+            width: 400px;
+            height: 300px;
+            border: 5px dashed #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <img src="" alt="">
+</body>
+</html>
+
+<script>
+    //1. 当向浏览器拖入文件时，默认情况下， 浏览器会在另外一个网页打开该文件
+    //2. 我们需要阻止浏览器的默认行为 
+    document.ondragover = function(event) {
+        // console.log(event);
+        event.preventDefault();
+    }
+
+    //如果需要把文件往浏览器中拖， 除了阻止ondragover的默认事件之外，还需要阻止ondrop的默认事件
+    document.ondrop = function(event) {
+        event.preventDefault();
+        // console.log(event);
+
+        //1. 拿到文件
+        var file = event.dataTransfer.files[0];
+        console.log(file);
+
+        //2. 创建一个读取文件的对象
+        var reader = new FileReader();
+
+        //3. 装载文件
+        reader.readAsDataURL(file);
+
+        //4. 加载文件完成后，使用文件
+        reader.onload = function() {
+            document.querySelector("img").src = reader.result;
+        }
+    }
+</script>

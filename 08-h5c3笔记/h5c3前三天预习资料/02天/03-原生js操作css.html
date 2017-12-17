@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .black {
+            background-color: black;
+        }
+
+        .white {
+            background-color: white;
+        }
+    </style>
+
+    <script src="./jquery.min.js"></script>
+</head>
+<body>
+    <input type="button" id="open" value="开灯">
+    <input type="button" id="close" value="关灯">
+    <input type="button" id="toggle" value="点一下开，再点一下关">
+    <input type="button" id="isclose" value="是否关灯了？">
+</body>
+</html>
+
+<script>
+    document.querySelector("#open").onclick = function() {
+        //1. 拿到dom元素的classList, classList是一个伪数组
+        //2. 对classList做 add, remove, toggle, contains的操作
+        document.body.classList.add("white");
+        document.body.classList.remove("black");
+    }
+
+    document.querySelector("#close").onclick = function() {
+        document.body.classList.add("black");
+        document.body.classList.remove("white");
+    }
+
+    document.querySelector("#toggle").onclick = function() {
+        document.body.classList.toggle("black");
+    }
+
+    document.querySelector("#isclose").onclick = function () {
+        console.log(document.body.classList.contains("black"));
+    }
+</script>

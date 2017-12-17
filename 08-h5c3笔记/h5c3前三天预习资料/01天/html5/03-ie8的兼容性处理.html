@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        header {
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+</body>
+</html>
+
+<!-- 判断浏览器的版本 -->
+<!-- lte = less than equal 小于等于 -->
+<!--[if lte IE 8]>
+    <script>
+    //1. 创建一个header标签
+    var header = document.createElement("header");
+    //2. 设置display为block
+    header.style.display = "block";
+    //3. 放入body中
+    document.body.appendChild(header);
+    </script>
+<![endif]-->
+

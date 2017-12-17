@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    body,html{
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(120px at right top,red,greenyellow,skyblue);
+    }
+ img{
+   position: absolute;
+   bottom: 100px;
+   right:100px;
+   animation: rider 1s infinite, car 3s 1s;
+ }
+    @keyframes rider {
+      50% {
+        transform: translateY(20px);
+        bottom: 140px;
+      }
+    }
+
+    @keyframes car{
+      100% {
+        /*transform: translateX(-1000px);*/
+        right:1000px;
+      }
+    }
+  </style>
+</head>
+<body>
+<img  class="rider" src="../img/rider.png">
+</body>
+</html>

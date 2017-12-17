@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="first">我是老1</li>
+        <li>我是老2</li>
+        <li id="third">我是老3</li>
+        <li>我是老4</li>
+        <li>我是老5</li>
+    </ul>
+</body>
+</html>
+
+<script>
+    var first = document.getElementsByClassName("first")[0];
+    var first1 = document.getElementsByTagName("li")[0];
+
+    //永远取到满足条件的第一个元素
+    var first2 = document.querySelector(".first");
+    var third = document.querySelector("#third");
+
+    var first4 = document.querySelector("li");
+    console.log(first4.innerHTML);
+
+    var lis = document.querySelectorAll("li");
+    console.log(lis);
+</script>

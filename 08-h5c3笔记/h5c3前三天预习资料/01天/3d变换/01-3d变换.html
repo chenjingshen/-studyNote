@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        ul {
+            list-style: none;
+            margin: 100px auto;
+            text-align: center;
+            /* 视矩： 值越小， 效果越明显 */
+            perspective: 500px;
+        }
+
+        li {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            background-color: yellowgreen;
+            background: url("../img/fox2.jpg") left top / 100% 100% no-repeat;
+            /* 开启3d效果 */
+            transform-style: preserve-3d;
+        }
+
+        li:nth-child(1):hover {
+            transition: all 1s;
+            transform: rotateX(45deg);
+        }
+
+        li:nth-child(2):hover {
+            transition: all 1s;
+            transform: rotateY(45deg);
+        }
+
+        li:nth-child(3):hover {
+            transition: all 1s;
+            transform: rotateZ(45deg);
+        }
+
+        li:nth-child(4):hover {
+            transition: all 1s;
+            transform: translateZ(20px);
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

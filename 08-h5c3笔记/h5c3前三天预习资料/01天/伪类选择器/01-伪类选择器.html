@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        /* 需要满足两个条件： 1. 必须是li 2. 必须是最后一个子元素 */
+        li:first-child {
+            background-color: red;
+        }
+
+        li:nth-child(3) {
+            background-color: yellow;
+        }
+
+        /* n是从1开始的 */
+        li:nth-child(2n) {
+            color: red;
+        }
+        /* odd奇数行   even偶数行 */
+        li:nth-child(odd) {
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="first">我是老1</li>
+        <li id="second">我是老2</li>
+        <li>我是老3</li>
+        <li>我是老4</li>
+        <li>我是老5</li>
+        <li>我是老6</li>
+        <li>我是老7</li>
+        <li>我是老8</li>
+        <div class="nine"></div>
+    </ul>
+</body>
+</html>
+<!-- 
+    伪类选择器
+    1. 在html中没有定义， 但是在css却可以使用， 就叫伪; 特征就是冒号
+ -->

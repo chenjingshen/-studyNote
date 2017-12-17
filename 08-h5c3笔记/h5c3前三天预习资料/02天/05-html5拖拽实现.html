@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .from, .to {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background-color: yellowgreen;
+        }
+
+        .move {
+            width: 80px;
+            height: 80px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- h3{从这个盒子}+(.from>.move)+h3{到这个盒子}+.to -->
+    <h3>从这个盒子</h3>
+    <div class="from">
+        <div class="move" draggable="true"></div>
+    </div>
+    <h3>到这个盒子</h3>
+    <div class="to"></div>
+</body>
+</html>
+
+<script>
+    var from = document.querySelector(".from");
+    var to = document.querySelector(".to");
+    var move = document.querySelector(".move");
+
+    // to.ondragstart = function() {
+    //     console.log("开始拖动");
+    // }
+
+    // to.ondrag = function() {
+    //     console.log("正在拖动");
+    // }
+
+    // to.ondragend = function() {
+    //     console.log("拖动结束");
+    // }
+
+    to.addEventListener("dragover", function(event) {
+        event.preventDefault();
+    });
+
+    to.addEventListener("drop", function(event){
+        to.appendChild(move);
+    });
+
+    C:/www
+    // to.ondragover = function(event) {
+    //     // 默认情况下， 父盒子是不允许拖入子盒子，所以，要阻止默认事件
+    //     event.preventDefault();
+    // }
+
+    // to.ondrop = function() {
+    //     to.appendChild(move);
+    // }
+
+    // from.ondragover = function(event) {
+    //     // 默认情况下， 父盒子是不允许拖入子盒子，所以，要阻止默认事件
+    //     event.preventDefault();
+    // }
+
+    // from.ondrop = function() {
+    //     from.appendChild(move);
+    // }
+
+
+    
+</script>
+
+<!-- 
+    总结：
+    1. 如果要把小盒子拖到父盒子， 小盒子必须是允许拖拽的 draggable="true"
+    2. 父盒子默认是不允许拖入的， 必须要阻止默认事件 event.preventDefault();
+    3. 父盒子必须要监听两个事件， ondragover（拖动经过它）， ondrop（松手）
+    4. 把子盒子添加到父盒子
+ -->

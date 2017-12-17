@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+
+        li:first-child {
+            transform: rotate(45deg);
+        }
+
+        li:nth-child(2) {
+            transform: scale(0.5);
+        }
+
+        li:nth-child(3) {
+            transform: translate(100px , 0px);
+        }
+
+        li:nth-child(4) {
+            transform: translate(0px, -50px);
+        }
+
+        li:nth-child(5) {
+            transform: translate(50px, 50px);
+        }
+
+        /* 改变transformorigin */
+        li:nth-child(6) {
+            transform-origin: left top;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>旋转</li>
+        <li>缩放</li>
+        <li>x平移</li>
+        <li>y平移</li>
+        <li>x，y都平移</li>
+        <li>改变origin</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="./img/dog2.jpg" alt="" data-name="来福" data-age=3 data-intro="我爱吃骨头">
+</body>
+</html>
+
+<script>
+    var attributes = document.querySelector("img").dataset;
+    console.log(attributes);
+
+    console.log(attributes.name);
+
+    // var name = document.querySelector("img").getAttribute("name");
+    // alert(name);
+</script>
+
+<!-- 
+1. 在html5中，在自定义属性时， 推荐我们在属性前面加一个 data-
+2。 在取某个自定义的属性时， 先取dom的dataset， 再通过key（键）取到对应的值
+ -->

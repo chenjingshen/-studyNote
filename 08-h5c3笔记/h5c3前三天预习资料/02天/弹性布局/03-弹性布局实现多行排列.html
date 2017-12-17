@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        ul {
+            list-style: none;
+            /* 可以实现子元素的水平分布，但是如果父盒子的空间较小，会挤压子盒子的空间 */
+            display: flex;
+            flex-wrap: wrap;
+            background-color: orange;
+            /* 该属性指定所有的子元素在水平方向的排布的方，如果有多行， 效果非常差，只有在单行的时候，才能满足我们的布局需求 */
+            justify-content: space-around;
+            width: 690px;
+            padding: 0;
+        }
+
+        li {
+            padding: 0;
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+        }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li>我是老1</li>
+        <li>我是老2</li>
+        <li>我是老3</li>
+        <li>我是老4</li>
+        <li>我是老5</li>
+    </ul>
+</body>
+</html>

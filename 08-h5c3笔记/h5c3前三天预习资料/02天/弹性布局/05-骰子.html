@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: hotpink;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            width: 150px;
+            height: 150px;
+            margin: 20px;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+        }
+
+        li {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        .ul1 {
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        /* 第二个面 */
+        .ul2 {
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* 第三个面 */
+        .ul3 {
+            justify-content: space-around;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .ul3 li:nth-child(2) {
+            align-self: center;
+        }
+
+        .ul3 li:nth-child(3) {
+            align-self: flex-end;
+        }
+
+        /* 第四个面 */
+        .ul4 {
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .ul4 li {
+            margin: 20px;
+        }
+
+        /* 第五个面 */
+        .ul5 {
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .ul5 li {
+            margin: 0px 20px;
+        }
+
+        .ul5 li:nth-child(3) {
+            margin: 0px 50px;
+        }
+
+        /* 第六个面 */
+        .ul6 {
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .ul6 li {
+            margin: 0px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>骰子的第一个面</h3>
+    <ul class="ul1">
+        <li></li>
+    </ul>
+
+    <h3>骰子的第二个面</h3>
+    <ul class="ul2">
+        <li></li>
+        <li></li>
+    </ul>
+
+    <h3>骰子的第三个面</h3>
+    <ul class="ul3">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <h3>骰子的第四个面</h3>
+    <ul class="ul4">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <h3>骰子的第五个面</h3>
+    <ul class="ul5">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <h3>骰子的第六个面</h3>
+    <ul class="ul6">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
+
+<!-- 
+    弹性布局的属性的总结： 
+    1. 如果要实现弹性布局： display:flex;
+    2. 如果实现了 dispaly:flex; 元素会水平排列
+    3. 如果子盒子要按照某种比例来分配分盒子的空间， 需要指定 flex， flex-basis
+    4. 如果子元素比较多， 可以换行显示， flex-wrap: wrap
+    5. 我可以指定水平方向的排列方式： justify-content: space-around
+    6. 如果要指定某一行元素在垂直方向的对齐方式， 指定 align-items: center
+    7. 具体某一个元素， 它可以指定自己在垂直方向的对齐方式： align-self: flex-start
+ -->

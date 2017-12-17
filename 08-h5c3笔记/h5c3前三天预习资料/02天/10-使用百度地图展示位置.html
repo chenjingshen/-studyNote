@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+	body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+    </style>
+    <!-- 如果要使用百度地图，需要导入该js文件;必须要api的官网注册一个密钥 -->
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=VknLy5cdMswqwDTE0OANw9eDcR4ydjE7"></script>
+	<title>地图展示</title>
+</head>
+<body>
+    <!-- 地图将展示在这个div中 -->
+	<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");    
+    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(121.6083952765209, 31.03681552184861), 17);  
+    // 初始化地图,设置中心点坐标和地图级别
+	//添加地图类型控件
+	map.addControl(new BMap.MapTypeControl({
+		mapTypes:[
+            BMAP_NORMAL_MAP,
+            BMAP_HYBRID_MAP
+        ]}));	  
+	map.setCurrentCity("上海");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var bodyh = document.body.offsetHeight;
+    console.log(bodyh);
+</script>
+
+<!-- 
+    html和body
+    1. html和body一开始的时候都是没有高度的
+    2. html设一个height：100%，会得到浏览器窗口的高度
+    3. body设一个height: 100%, 会得到html的高度
+    4. body比较特殊， 在高度为0的情况下，对其设颜色或者背景，仍然会铺满整个窗口
+    5. body的overflow： visibility. 如果其子元素跑到屏幕的外面就会出现滚动条
+-->

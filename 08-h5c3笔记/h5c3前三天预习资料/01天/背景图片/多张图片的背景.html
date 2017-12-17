@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid #000;
+            width: 623px;
+            height: 417px;
+            margin: 100px auto;
+            background: 
+            url("./img/bg1.png") left top no-repeat,
+            url("./img/bg2.png") right top no-repeat,
+            url("./img/bg3.png") right bottom no-repeat,
+            url("./img/bg4.png") left bottom no-repeat,
+            /* 113px 84px代表的是背景图片绘制的位置， 363px 258px 代表背景图片的大小*/
+            /* left right都要换成x方向的值， bottom， top都可以换y对应的值 */
+            url("./img/fox2.jpg") 113px 84px / 363px 258px no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

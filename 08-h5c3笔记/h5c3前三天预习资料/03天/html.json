@@ -1,0 +1,181 @@
+{
+    /*
+        // Place your snippets for HTML here. Each snippet is defined under a snippet name and has a prefix, body and 
+        // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+        // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+        // same ids are connected.
+        // Example:
+        "Print to console": {
+            "prefix": "log",
+            "body": [
+                "console.log('$1');",
+                "$2"
+            ],
+            "description": "Log output to console"
+        }
+    */
+        "cnavasTemplate": {
+                "prefix": "cat",
+                "body": [
+                            "<!DOCTYPE html>",
+                            "<html lang='en'>",
+                            "<head>",
+                            "\t<meta charset=\"UTF-8\">",
+                            "\t<title>Title</title>",
+                            "\t<style>",
+                            "\t\t#canvas {",
+                            "\t\t\tborder: 1px solid #000;",
+                            "\t\t}",
+                            "\t</style>",
+                            "</head>",
+                            "<body>",
+                            "<canvas width='600' height='400' id='canvas'></canvas>",
+                            "<script>",
+                            "\tvar canvas = document.getElementById('canvas');",
+                            "\tvar context = canvas.getContext('2d');",
+                            "</script>",
+                            "</body>",
+                            "</html>"
+                ],
+                "description": "canvas template"
+        },
+    
+        "myhtm5Template": {
+            "prefix": "mydoc",
+            "body": [
+                "<!DOCTYPE html>",
+                "<html lang=\"en\">",
+                    "<head>",
+                        "\t<title></title>",
+                        "\t<meta charset=\"UTF-8\">",
+                        "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+                        "\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
+                    "</head>",
+                    "<body>",
+                    "\t$0",
+                    "</body>",
+                "</html>"
+            ],
+            "description": "html5 template"
+        },
+    
+        "yourhtm5Template": {
+            "prefix": "yourdoc",
+            "body": [
+                "<!DOCTYPE html>",
+                "<html lang=\"en\">",
+                    "<head>",
+                        "\t<title></title>",
+                        "\t<meta charset=\"UTF-8\">",
+                        "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no\">",
+                        "\t<meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">",
+                    "</head>",
+                    "<body>",
+                    "\t$0",
+                    "</body>",
+                "</html>"
+            ],
+            "description": "html5 template"
+        },
+    
+        "mycss": {
+            "prefix": "mc",
+            "body": [
+                "<style>",
+                "\t$0",
+                "</style>"
+            ],
+            "description": "mycss template"
+        },
+    
+        "myjs": {
+            "prefix": "mj",
+            "body": [
+                "<script>",
+                "\t$0",
+                "</script>"
+            ],
+            "description": "myjs"
+        },
+    
+        "mysrc": {
+            "prefix": "mysrc",
+            "body": [
+                "<script src=\"$1\"></script>"
+            ],
+            "description": "myjs"
+        },
+    
+        "ie8": {
+            "prefix": "ie8",
+            "body": [
+                "<!--[if lte IE ${1:8}]>",
+                "\t$2$0",
+                "<![endif]-->"
+            ],
+            "description": "ie8"
+        },
+    
+        "myul": {
+            "prefix": "mu",
+            "body": [
+                "<!DOCTYPE html>",
+                "<html lang=\"en\">",
+                "<head>",
+                "\t<title></title>",
+                "\t<meta charset=\"UTF-8\">",
+                "\t<style>",
+                "\t\tul {",
+                "\t\t\tlist-style: none;",
+                "\t\t\ttext-align: center;",
+                "\t\t\tmargin: 0 auto;",
+                "\t\t\tmargin-top: 100px;",
+                "\t\t}",
+                "",
+                "\t\tli {",
+                "\t\t\tdisplay: inline-block;",
+                "\t\t\tline-height: 150px;",
+                "\t\t\twidth: 150px;",
+                "\t\t\theight: 150px;",
+                "\t\t\tbackground-color: yellowgreen;",
+                "\t\t\ttext-align: center;",
+                "\t\t\tmargin: 20px;",
+                "\t\t}",
+                "\t</style>",
+                "</head>",
+                "<body>",
+                "\tul>li*$0",
+                "</body>",
+                "</html>"
+            ],
+            "description": "myul"
+        },
+    
+        "mybox": {
+            "prefix": "mb",
+            "body": [
+                "<!DOCTYPE html>",
+                "<html lang=\"en\">",
+                "<head>",
+                "\t<title></title>",
+                "\t<meta charset=\"UTF-8\">",
+                "\t<style>",
+                "\t\t.box {",
+                    "\t\t\tmargin: 0 auto;",
+                    "\t\t\tmargin-top: 100px;",
+                    "\t\t\twidth: 150px;",
+                    "\t\t\theight: 150px;",
+                    "\t\t\tbackground-color: yellowgreen;",
+                    "\t\t}",
+                "\t</style>",
+                "</head>",
+                "<body>",
+                "\t.box$0",
+                "</body>",
+                "</html>"
+            ],
+            "description": "mybox"
+        },
+    }
+    
+    

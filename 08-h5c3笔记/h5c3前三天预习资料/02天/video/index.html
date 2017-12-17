@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .box {
+            margin: 100px auto;
+            width: 600px;
+            border: 1px solid #fff;
+        }
+
+        video {
+            width: 100%;
+            /* video的高度是由视频本身撑开的 */
+            display: block;
+        }
+
+        .control {
+            width: 100%;
+            height: 50px;
+            border-top: 1px solid #fff;
+        }
+
+        .left {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            float: left;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+        }
+
+        .right {
+            float: right;
+            width: 50px;
+            height: 50px;
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+        }
+
+        .progress {
+            float: left;
+            width: 500px;
+            height: 100%;
+            background: lightgray;
+        }
+
+        .current {
+            width: 0%;
+            height: 100%;
+            background-color: gray;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- video标签 -->
+        <video src="./movie/bglb.mp4"></video>
+
+        <!-- 控件按钮和进度条 -->
+        <div class="control">
+            <!-- 播放和暂停按钮 -->
+            <a class="left icon-play"></a>
+            <!-- 进度条 -->
+            <div class="progress">
+                <div class="current"></div>
+            </div>
+            <!-- 全屏按钮 -->
+            <a class="right icon-fullscreen"></a>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+    var video = document.querySelector("video");
+    document.querySelector(".left").onclick = function() {
+        //video.paused == true代表是暂停状态
+        if (video.paused == true) {
+            //让视频开始播放
+            video.play();
+            //更换图标
+            this.classList.remove("icon-play");
+            this.classList.add("icon-pause");
+        } else {
+            //让视频暂停
+            video.pause();
+            //更换图标
+            this.classList.remove("icon-pause");
+            this.classList.add("icon-play");
+        }
+    }
+
+    document.querySelector(".right").onclick = function() {
+        //想让某一个元素全屏显示， 就让该元素调用requestFullScreen的方法
+        video.webkitRequestFullScreen();
+    }
+
+    //当视频在播放时，调用
+    video.ontimeupdate = function() {
+        // console.log(video.duration);
+        // console.log(video.currentTime);
+
+        var percent = video.currentTime / video.duration * 100 + "%";
+        console.log(percent);
+        document.querySelector(".current").style.width = percent;
+    }
+
+    //给progress添加点击事件
+    document.querySelector(".progress").onclick = function(event) {
+        //点击的x坐标
+        var x = event.offsetX;
+        console.log(x);
+        //progress的宽度
+        var w = this.offsetWidth;
+
+        //计算出当前视频播放的位置的时间
+        var currentTime = video.duration * x / w;
+
+        //设置播放时间
+        video.currentTime = currentTime;
+    }
+</script>
+
+<!-- 
+    总结:
+    0. 所有的关于视频播放的api，都是由video来调的
+    1. 判断当前是否处于播放或者暂停的状态 video.paused == true
+    2. 播放或暂停 video.play() video.pause();
+    3. 如果希望video全屏 video.webkitRequestFullScreen();
+    4. 如果更新进度 video.duration(视频的总时长)， video.currentTime(视频的当前时间)
+    5. 可以根据以上的两个值，计算出进度的百分比；如果想要跳到视频的某个位置， 直接设 video.currentTime的值
+ -->

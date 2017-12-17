@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .red {
+            background-color: hotpink;
+        }
+
+        .blue {
+            background-color: skyblue;
+        }
+
+        .green {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body class="red">
+    <input type="button" value = "红色" id="red">
+    <input type="button" value = "蓝色" id="blue">
+    <input type="button" value = "绿色" id="green">
+</body>
+</html>
+
+<script>
+    //从用户的电脑上将颜色信息读取出来， 设给body
+    var color = window.localStorage.getItem("color");
+    document.body.className = color;
+
+
+    //当用户选择了某种颜色之后， 将该颜色存储起来
+    document.querySelector("#red").onclick = function() {
+        document.body.className = "red";
+        window.localStorage.setItem("color", "red");
+    }
+
+    document.querySelector("#blue").onclick = function() {
+        document.body.className = "blue";
+        window.localStorage.setItem("color", "blue");
+    }
+
+    document.querySelector("#green").onclick = function() {
+        document.body.className = "green";
+        window.localStorage.setItem("color", "green");
+    }
+</script>

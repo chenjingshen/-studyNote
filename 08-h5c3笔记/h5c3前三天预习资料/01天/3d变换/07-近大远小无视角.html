@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin-top: 100px;
+        }
+
+        li {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            /* background-color: yellowgreen; */
+            padding: 0;
+            margin: 20px;
+            perspective: 200px;
+        }
+
+        .little {
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            transform-style: preserve-3d;
+            transition: all 2s;
+        }
+
+        ul:hover li .little {
+            transform: rotateY(90deg);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><div class="little"></div></li>
+        <li><div class="little"></div></li>
+        <li><div class="little"></div></li>
+        <li><div class="little"></div></li>
+        <li><div class="little"></div></li>
+    </ul>
+</body>
+</html>

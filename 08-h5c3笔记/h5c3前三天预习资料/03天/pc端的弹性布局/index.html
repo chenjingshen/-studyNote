@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        header {
+            height: 100px;
+        }
+
+        nav {
+            background-color: hotpink;
+            height: 100%;
+            /* 让里面所有的a水平换行显示 */
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        nav a {
+            width: 100px;
+            text-decoration: none;
+        }
+
+        .main {
+            /* 让左中右三块水平排列，并且分配空间 */
+            display: flex;
+            margin: 5px 0px;
+        }
+
+        .left {
+            background-color: yellowgreen;
+            flex: 1;
+            /* 让里面的a标签一行显示一个， 相当于换行显示 */
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .left a {
+            width: 100%;
+            border-bottom: 1px solid #fff;
+            padding: 10px 10px;
+            text-decoration: none;
+        }
+
+
+        .center {
+            margin: 0px 5px;
+            background-color: skyblue;
+            flex: 2;
+            
+            /* 让所有的商品的div水平换行显示 */
+            display: flex;
+            flex-wrap: wrap;
+            /* 主轴方向的布局(水平) */
+            justify-content: space-around;
+            /* 副轴方向的布局（垂直） */
+            align-content: flex-start;
+        }
+
+        .good {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: orange;
+        }
+
+        .right {
+            background-color: bisque;
+            flex: 1;
+
+            /* 让list换行显示 */
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .right .list {
+            width: 100%;
+            display: flex;
+            border-bottom: 1px solid #fff;
+        }
+
+        .right .list .good {
+            flex-basis: 100px;
+        }
+
+        .right .list a {
+            flex: 1;
+            padding-top: 20px;
+            text-decoration: none;
+        }
+
+        footer {
+            /* 让里面所有的ul水平分布 */
+            display: flex;
+            height: 100px;
+            background-color: tomato;
+        }
+
+        footer ul{
+            margin: 0;
+            padding: 0;
+            /* 每个ul占四分之一的宽度 */
+            flex: 1;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            height: 100%;
+            background-color: green;
+            list-style: none;
+
+            /* 让ul水平换行显示， 一行显示一个 */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        footer ul li {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background-color: orange;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+            <a href="">快来点我哦</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <div class="left">
+            <a href="">你说你还是喜欢孤单，其实你怕被我看穿。。。。</a>
+            <a href="">你说你还是喜欢孤单，其实你怕被我看穿。。。。</a>
+            <a href="">你说你还是喜欢孤单，其实你怕被我看穿。。。。</a>
+            <a href="">你说你还是喜欢孤单，其实你怕被我看穿。。。。</a>
+            <a href="">你说你还是喜欢孤单，其实你怕被我看穿。。。。</a>
+            <a href="">你说你还是喜欢孤单，其实你怕被我看穿。。。。</a>
+            <a href="">你说你还是喜欢孤单，其实你怕被我看穿。。。。</a>
+            <a href="">你说你还是喜欢孤单，其实你怕被我看穿。。。。</a>
+            <a href="">你说你还是喜欢孤单，其实你怕被我看穿。。。。</a>
+            <a href="">你说你还是喜欢孤单，其实你怕被我看穿。。。。</a>
+        </div>
+        <div class="center">
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+            <div class="good"></div>
+        </div>
+        <div class="right">
+            <!-- (.list>(.good+a{我是商品，你买不了吃亏，买不了上当， 快来点我吧}))*10 -->
+            <div class="list">
+                <div class="good"></div>
+                <a href="">我是商品，你买不了吃亏，买不了上当， 快来点我吧</a>
+            </div>
+            <div class="list">
+                <div class="good"></div>
+                <a href="">我是商品，你买不了吃亏，买不了上当， 快来点我吧</a>
+            </div>
+            <div class="list">
+                <div class="good"></div>
+                <a href="">我是商品，你买不了吃亏，买不了上当， 快来点我吧</a>
+            </div>
+            <div class="list">
+                <div class="good"></div>
+                <a href="">我是商品，你买不了吃亏，买不了上当， 快来点我吧</a>
+            </div>
+            <div class="list">
+                <div class="good"></div>
+                <a href="">我是商品，你买不了吃亏，买不了上当， 快来点我吧</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+        </ul>
+        <ul>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+        </ul>
+        <ul>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+        </ul>
+        <ul>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+            <li>我的地盘我做主</li>
+        </ul>
+    </footer>
+</body>
+</html>
+<!-- lorem100+tap : 会自动生成一串测试用的文字-->

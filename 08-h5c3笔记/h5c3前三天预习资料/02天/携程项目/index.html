@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        header {
+            width: 100%;
+        }
+
+        header img {
+            width: 100%;
+            display: block;
+        }
+
+        section {
+            margin-top: 5px;
+            display: flex;
+            height: 100px;
+            width: 100%;
+        }
+
+        section .left {
+            flex: 1;
+            height: 100%;
+            background-color: yellow;
+            margin-right: 5px;
+        }
+
+        section .right {
+            flex: 2;
+            height: 100%;
+            background-color: hotpink;
+
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* a标签的文字等同于子元素 */
+
+        section .right a {
+            width: 50%;
+            height: 50%;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: white;
+            font-weight: 900;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .last {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .last a {
+            background-color: hotpink;
+            width: 33.33333333%;
+            height: 50%;
+            border: 1px solid #fff;
+            box-sizing: border-box;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-weight: 900;
+        }
+
+        footer {
+            display: flex;
+        }
+
+        footer a {
+            flex: 1;
+        }
+
+        footer a img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="./images/banner.jpg" alt="">
+    </header>
+
+    <section>
+        <div class="left"></div>
+        <div class="right">
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+        </div>
+    </section>
+    <section>
+        <div class="left"></div>
+        <div class="right">
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="left"></div>
+        <div class="right">
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="left"></div>
+        <div class="right">
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+            <a href="">住酒店</a>
+        </div>
+    </section>
+
+    <section class="last">
+        <a href="">住酒店</a>
+        <a href="">住酒店</a>
+        <a href="">住酒店</a>
+        <a href="">住酒店</a>
+        <a href="">住酒店</a>
+        <a href="">住酒店</a>
+    </section>
+
+    <footer>
+        <a href=""><img src="./images/extra_1.png" alt=""></a>
+        <a href=""><img src="./images/extra_2.png" alt=""></a>
+    </footer>
+</body>
+
+</html>

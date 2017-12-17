@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="welcome"></div>
+    <form>
+        <input type="text" id="name" placeholder="请输入用户名">
+        <input type="password" id="password" placeholder="请输入密码">
+        <input type="submit" id="submit" value="提交">
+    </form>
+</body>
+</html>
+
+<script>
+    //从本地取到数据，显示出来
+    var name = window.localStorage.getItem("name");
+    
+    document.querySelector(".welcome").innerHTML = "欢迎归来，"+name;
+
+    //添加点击事件
+    document.querySelector("#submit").onclick = function() {
+        //取到表单中的name和password
+        var name = document.querySelector("#name").value;
+        var password = document.querySelector("#password").value;
+        //如果name和password都有值， 就把用户名存起来
+        if (name.length > 0 && password.length > 0) {
+            //通过键值对的形式，把数据存在本地的硬盘里
+            window.localStorage.setItem("name", name);
+        }
+    }
+</script>

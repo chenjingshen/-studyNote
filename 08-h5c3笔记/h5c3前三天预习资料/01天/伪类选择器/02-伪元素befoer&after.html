@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .box {
+            margin: 30px;
+            width: 200px;
+            height: 200px;
+            background-color: hotpink;
+            position: relative;
+        }
+
+        /* 
+            1. 相当于使用css创建两个div， before永远在子元素的最前面， after永远在子元素的最后面 
+            2. content 必须要设
+            3. display 必须要设
+        */
+        .box::before {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            /* position: absolute; */
+        }
+
+        .box::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            right: 0;
+            bottom: 0;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"><div class="hello"></div></div>
+</body>
+</html>

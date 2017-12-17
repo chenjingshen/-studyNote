@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" id="file">
+    <img src="" alt="">
+</body>
+</html>
+<script>
+    document.querySelector("#file").onchange = function() {
+        console.log("选择了文件");
+        //1. 拿到文件
+        var file = this.files[0];
+        //2. 创建一个reader（专门读取文件的一个对象）
+        var reader = new FileReader();
+        
+        //3. 加载文件
+        reader.readAsDataURL(file);
+        //4. 加载成功之后，使用该文件
+        reader.onload = function() {
+            var img = reader.result;
+            document.querySelector("img").src = img;
+        }
+    }
+</script>

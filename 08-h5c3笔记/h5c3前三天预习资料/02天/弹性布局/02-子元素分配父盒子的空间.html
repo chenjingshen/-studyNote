@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        ul {
+            /* width: 800px; */
+            list-style: none;
+            height: 200px;
+            display: flex;
+            padding: 0;
+        }
+
+        li {
+            padding: 0;
+            border: 1px solid #000;
+            height: 100%;
+            /* 所有的li标签从父盒子各分得一份 */
+            /* flex: 1; */
+        }
+
+        li:nth-child(1) {
+            /* 给该元素设一个固定的宽度 */
+            /* flex-basis: 400px; */
+            flex: 3;
+        }
+
+        li:nth-child(2) {
+            flex: 2;
+        }
+
+        li:nth-child(3) {
+            flex: 2;
+        }
+    </style>
+
+</head>
+<body>
+    <ul>
+        <li>我是1</li>
+        <li>我是2</li>
+        <li>我是3</li>
+    </ul>
+</body>
+</html>
+
+<!-- 
+    分配布盒了的空间的规则
+    1. 父盒子需要指定display:flex;
+    2. 子盒子要么指定flex-basis, 要么指定flex
+    3. flex-basis是一个固定的宽度， 不管父盒子的宽度怎么变，值都是固定的
+    4. flex会把父盒子按总份数，分割，每个子元素占多少份
+ -->

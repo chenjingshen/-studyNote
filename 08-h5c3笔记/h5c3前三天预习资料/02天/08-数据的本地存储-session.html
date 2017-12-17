@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="welcome"></div>
+    <form>
+        <input type="text" id="name" placeholder="请输入用户名">
+        <input type="password" id="password" placeholder="请输入密码">
+        <input type="submit" id="submit" value="提交">
+    </form>
+</body>
+</html>
+
+<script>
+    var name = window.sessionStorage.getItem("name");
+    document.querySelector(".welcome").innerHTML = "欢迎归来，"+name;
+
+    document.querySelector("#submit").onclick = function() {
+        var name = document.querySelector("#name").value;
+        var password = document.querySelector("#password").value;
+
+        if (name.length > 0 && password.length > 0) {
+            window.sessionStorage.setItem("name", name);
+        }
+    }
+</script>
+
+<!-- 
+    数据的本地存储
+    1. 如果我们想要在本地存信息， 有两种方式， 每一种localStorage， 第二sessionStorage
+    2. 通过setItem(key, value)的形式，可以把信息存起来
+    3. 通过getItem(key)的形式，把信息取出来
+    4. localStorage存储的时间比较长，关闭浏览器之后，信息依然存在;sessionStorage在关闭浏览器之后，信息就没有了
+ -->
